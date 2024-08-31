@@ -1,0 +1,158 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --Moderate-violet: hsl(263, 55%, 52%);
+    --Very-dark-grayish-blue: hsl(217, 19%, 35%);
+    --Very-dark-blackish-blue: hsl(219, 29%, 14%);
+    --White: hsl(0, 0%, 100%);
+    --Light-gray: hsl(0, 0%, 81%);
+    --Light-grayish-blue: hsl(210, 46%, 95%);
+}
+
+body{
+    display: grid;
+    place-content: center;
+    min-height: 100vh;
+    line-height: 1.5;
+    font-family: "Barlow Semi Condensed", sans-serif;
+    font-weight: 500;
+    font-size: 0.8125rem;
+    background-color: var(--Light-grayish-blue);
+    padding: 3rem 1.5rem;
+}
+
+.container{
+    display: grid;
+    gap: 1.5rem;
+    margin-inline: auto;
+    width: min(95%, 70rem);
+}
+
+@media (min-width: 800px){
+    .container{
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (min-width: 1050px){
+    .container{
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+.cards{
+    border-radius: 0.75rem;
+    padding: 2rem;
+}
+
+.user{
+    display: flex;
+    align-items: center;
+    padding-bottom: 1rem;
+}
+
+.user-img{
+    width: 2.5rem;
+    aspect-ratio: 1;
+    margin-right: 0.5rem;
+    border-radius: 50%;
+}
+
+.user h1{
+    font-size: 0.8125rem;
+}
+
+.user h2{
+    font-size: 0.6875rem;
+    opacity: 50%;
+}
+
+.sub-heading{
+    font-weight: 600;
+    font-size: 1.25rem;
+    line-height: 1.2;
+    padding-bottom: 0.75rem;
+}
+.wht{
+    color: var(--White);
+}
+
+
+/* CARD 1 */
+.card-1{
+    color: var(--Light-gray);
+    background-color: var(--Moderate-violet);
+    background-image: url(/images/bg-pattern-quotation.svg);
+    background-repeat: no-repeat;
+    background-position: top right 10%;
+}
+
+
+/* CARD 2 */
+.card-2{
+    color: var(--Light-gray);
+    background-color: var(--Very-dark-grayish-blue);
+}
+
+
+/* CARD 3 */
+.card-3{
+    color: var(--Very-dark-grayish-blue);
+    background-color: var(--White);
+}
+
+
+/* CARD 4 */
+.card-4{
+    color: var(--Light-gray);
+    background-color: var(--Very-dark-blackish-blue);
+}
+
+
+/* CARD 5 */
+.card-5{
+    color: var(--Very-dark-grayish-blue);
+    background-color: var(--White);
+}
+
+@media (min-width: 800px){
+    .card-1{
+        grid-column: span 2;
+    }
+
+    .card-4{
+        grid-column: span 2;
+    }
+
+    .card-5{
+        grid-row: 2;
+        grid-column: span 3;
+    }
+}
+
+
+@media (min-width: 1050px){
+    .card-1{
+        grid-column: span 2;
+    }
+
+    .card-4{
+        grid-column: span 2;
+    }
+
+    .card-5{
+        grid-column: 4;
+        grid-row: 1 / span 2;
+    }
+}
+
+
+
